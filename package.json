@@ -1,0 +1,22 @@
+{
+  "name": "Monty-Components",
+  "version": "0.0.1",
+  "description": "A JSON component builder for ECMC",
+  "author": "Jay Hughes",
+  "scripts": {
+    "prestart": "npm install",
+    "start": "gulp --dev",
+    "build": "gulp"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.14.0",
+    "del": "^2.2.1",
+    "gulp": "^3.9.1",
+    "gulp-compile-handlebars": "^0.6.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-util": "^3.0.7"
+  },
+  "dependencies": {
+    "gulp-sass": "^3.1.0"
+  }
+}

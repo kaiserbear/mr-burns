@@ -1,0 +1,67 @@
+/* Grid Helper */
+
+.container {
+	position: relative;
+}
+
+.grid-helper {
+	background-image: url(/dist/images/grid-bg.png);
+	background-size: cover;
+	min-height: 502px;
+	border-radius: .7rem;
+}
+
+#grid-help {
+	font-size: 17px;
+    position: relative;
+    top: 38px;
+}
+
+// @media (min-width: 576px) {
+// 	.container {
+// 	    max-width: inherit!important;
+// 	}
+// }
+
+/* Quick Variables */
+
+$grid-1: 24.5px;
+$columns: #ffa8ad;
+$offset: #a8cfff;
+
+#grid-help-modal {
+	.modal-dialog {
+		min-width: 700px;
+		.grid-helper-container {
+			margin: 0 auto;
+			width: 427px;
+			position: relative;
+    		top: 75px;
+		}
+		[class*="h-offset-"], [class*="h-col-"] {
+			height: 23px;
+			display: block;
+			float:left;
+			border-radius: 3px;
+		}
+		[class*="h-col-"] {
+			background: $columns;
+		}
+		[class*="h-offset-"] {
+			background: $offset;
+			margin-right: 11.9px;
+		}
+		@for $i from 1 through 12 {
+			// Some crazy calculations here to work out where to drop the 'grid helpers'.
+		    .h-offset-#{$i}, .h-col-#{$i} {
+		    	width: calc( (#{$grid-1} * #{$i}) + (12px * (#{$i} - 1));
+		    }
+		}
+		.h-offset-0 {
+			height: 0!important;
+		}
+		.h-col-12 {
+			display: block;
+		}
+	}
+}

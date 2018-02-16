@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+    <head>
+        <title>
+            {{#if title}}
+                {{title}}
+            {{else}}
+                Monty Components
+            {{/if}}
+        </title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+        <link rel="stylesheet" href="/dist/css/app.css">
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.5.1/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.5.1/css/froala_style.min.css" rel="stylesheet" type="text/css" />
+        {{#> head-block}}
+            {{!-- Custom <head> content per page could be added. --}}
+        {{/head-block}}
+    </head>
+    <body>
+        <div id="wrapper">
+
+            {{> includes/nav }}
+
+            <div id="page-content-wrapper">
+
+                <div class="container">
+
+                    {{#> heading}}
+                        <h2>Welcome to the Monty Component Builder</h2>
+                    {{/heading}}
+
+                    {{#> form}}
+                        <p>Here you can build dynamic components and insert them into ECMC.</p>
+
+                        <button type="button" id="menu-toggle" class="btn btn-info navbar-btn">
+                            <i class="glyphicon glyphicon-align-left"></i>
+                            Start a new component
+                        </button>
+                    {{/form}}
+                </div>
+
+
+                <footer>
+                    <div class="container">
+                        <img id="store-name">
+                        {{#> footer-block}}
+                            {{> includes/footer }}
+                        {{/footer-block}}
+                    </div>
+                </footer>
+
+            </div>
+
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.js"></script>
+
+        {{#> scripts-block}}
+        {{!-- Custom scripts per page can be added. --}}
+        {{/scripts-block}}
+
+        <script type="text/javascript" src="/dist/js/tempData.js"></script>
+        <script type="text/javascript" src="/dist/js/app.js"></script>
+
+        {{#> scripts-two}}
+        {{!-- Custom scripts per page can be added. --}}
+        {{/scripts-two}}
+    </body>
+</html>

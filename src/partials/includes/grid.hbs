@@ -1,0 +1,52 @@
+<div class="form-group row">
+	<div class="col-2 col-md-3 col-sm-4">
+		<label for="sel1"><i class="fa fa-th"></i> Columns:</label>
+		<select id="grid-select" class="form-control col" name="sel1" id="columns">
+			<option id="please-select" selected="selected">Please select</option>
+			<option id="grid-col-1">1</option>
+			<option id="grid-col-2">2</option>
+			<option id="grid-col-3">3</option>
+			<option id="grid-col-4">4</option>
+			<option id="grid-col-5">5</option>
+			<option id="grid-col-6">6</option>
+			<option id="grid-col-7">7</option>
+			<option id="grid-col-8">8</option>
+			<option id="grid-col-9">9</option>
+			<option id="grid-col-10">10</option>
+			<option id="grid-col-11">11</option>
+			<option id="grid-col-12">12</option>
+		</select>
+	</div>
+	<div class="col-2 col-md-3 col-sm-4">
+		<label for="sel2"><i class="fa fa-indent" aria-hidden="true"></i> Offset:</label>
+		<select id="offset-select" class="form-control col" name="sel2" id="columns">
+			<option id="offset-0" selected="selected">0</option>
+			<option id="offset-1" disabled>1</option>
+			<option id="offset-2" disabled>2</option>
+			<option id="offset-3" disabled>3</option>
+			<option id="offset-4" disabled>4</option>
+			<option id="offset-5" disabled>5</option>
+			<option id="offset-6" disabled>6</option>
+			<option id="offset-7" disabled>7</option>
+			<option id="offset-8" disabled>8</option>
+			<option id="offset-9" disabled>9</option>
+			<option id="offset-10" disabled>10</option>
+			<option id="offset-11" disabled>11</option>
+		</select>
+	</div>
+	<div class="col-2 col-md-3 col-sm-4">
+		<a href="#" id="grid-help" data-toggle="modal" data-target="#grid-help-modal"><i class="fa fa-question-circle" aria-hidden="true"></i></a>
+	</div>
+</div>
+<!-- Modal -->
+<div id="grid-help-modal" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+		<!-- Modal content-->
+		<div class="modal-content grid-helper">
+			<div class="grid-helper-container">
+				<div id="grid-help-modal-offset"></div>
+				<div id="grid-help-modal-col"></div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,30 @@
+{{#> layouts/base title="Heading Component" }}
+
+    {{#*inline "heading"}}
+        <h2>Heading Component - <i class="fa fa-font"></i></h2>
+    {{/inline}}
+
+    {{#*inline "form"}}
+
+		<form>
+            {{> includes/grid }}
+            <div class="form-group">
+                <label for="formGroupExampleInput">Text</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Welcome to">
+            </div>
+        </form>
+
+        <button id="code-preview" class="btn btn-primary">Data Preview</button>
+
+        {{> includes/form-controls }}
+
+    {{/inline}}
+    {{#*inline "footer-block"}}
+        <pre><code id="output"></code></pre>
+    {{/inline}}
+
+    {{#*inline "scripts-block"}}
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.5.1//js/froala_editor.pkgd.min.js"></script>
+        <script type="text/javascript" src="/dist/js/grid.js"></script>
+    {{/inline}}
+{{/layouts/base}}

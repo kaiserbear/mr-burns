@@ -1,0 +1,88 @@
+body {
+	background: #fafafa;
+}
+
+h2 {
+	margin: 0 0 1rem 0;
+	i {
+		color: #7b7b7b;
+		padding: 0.5rem 0.5rem;
+	}
+}
+
+nav {
+	background: #404040;
+	margin-bottom: 2rem;
+	.divider {
+	    background: #505050;
+    	height: 1px;
+	}
+}
+
+img#store-name {
+    position: absolute;
+    width: 150px;
+    top: 0;
+    right: 0;
+    opacity: 0.4;
+}
+
+.new-comp-btn {
+	display: none;
+}
+
+.fr-quick-insert {
+	display: none!important;
+}
+
+// Doing this, probably due to my lack of understanding of the flexbox model in CSS.
+.modal-footer {
+	display: block;
+}
+
+.container {
+	a {
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+.image-preview {
+	text-align: center;
+	img {
+		width: 100%;
+	}
+}
+
+pre {
+	background: white;
+}
+
+.panel {
+	background: white;
+	padding: 1rem;
+}
+
+footer {
+	border-top: 1px solid #eaeaea;
+	font-size: 0.8rem;
+	margin-top: 3rem;
+	padding: 1rem 0 0;
+}
+
+//////////////////////////////////////////////////////////////////////////////////
+
+@import 'grid';
+
+//////////////////////////////////////////////////////////////////////////////////
+
+@import 'nav';
+
+//////////////////////////////////////////////////////////////////////////////////
+
+@import 'image-map';
+
+//////////////////////////////////////////////////////////////////////////////////
+
+@import 'buttons';

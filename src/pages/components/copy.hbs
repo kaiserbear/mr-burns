@@ -1,0 +1,33 @@
+{{#> layouts/base title="Copy Component" }}
+
+    {{#*inline "heading"}}
+        <h2>Copy Component - <i class="fa fa-file-text-o"></i></h2>
+    {{/inline}}
+
+    {{#*inline "form"}}
+
+		<form data-toggle="validator">
+            {{> includes/grid }}
+            <hr />
+            <div class="form-group">
+                <div id="editor" class="text-small">
+                    {{!-- <p>Start typing in here.</p> --}}
+                </div>
+            </div>
+        </form>
+
+        <button id="code-preview" class="btn btn-primary">Data Preview</button>
+
+        {{> includes/form-controls }}
+
+	{{/inline}}
+
+    {{#*inline "footer-block"}}
+        <pre><code id="output"></code></pre>
+    {{/inline}}
+
+    {{#*inline "scripts-block"}}
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.5.1//js/froala_editor.pkgd.min.js"></script>
+        <script type="text/javascript" src="/dist/js/grid.js"></script>
+    {{/inline}}
+{{/layouts/base}}

@@ -1,0 +1,104 @@
+{{#> layouts/base title="Image Map Component" }}
+
+    {{#*inline "heading"}}
+        <h2>Image Map Component - 
+            <i class="fa fa-picture-o" aria-hidden="true"></i>
+            <i class="fa fa-map-pin" aria-hidden="true"></i>
+        </h2>
+    {{/inline}}
+
+	{{#*inline "form"}}
+
+		<form>
+
+            {{> includes/grid }}
+
+            <div class="form-group">
+                <label for="sel1">Select an uploaded image from ECMC:</label>
+                  <select class="form-control" id="image-select">
+                        <option id="please-select" selected="selected">Please select</option>
+                  </select>
+            </div>
+
+            <div id="image-preview" class="image-map-container">
+                <div id="image-map" class="form-group image-preview">
+                </div>
+            </div>
+
+            <table class="table" id="image-mapper-table">
+                <thead>
+                    <tr>
+                        <th>Active</th>
+                        <th>Shape</th>
+                        <th>Link</th>
+                        <th>Title</th>
+                        <th>Target</th>
+                        <th style="width: 25px"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="width: 65px">
+                            <div class="control-label input-sm">
+                                <input type="radio" name="im[0][active]" value="1">
+                            </div>
+                        </td>
+                        <td>
+                            <select name="im[0][shape]" class="form-control input-sm">
+                                <option value="">---</option>
+                                <option value="rect">Rect</option>
+                                <option value="poly">Poly</option>
+                                <!-- <option value="circle">Circle</option> -->
+                            </select>
+                        </td>
+                        <td>
+                            <input type="text" name="im[0][href]" value="" placeholder="Link" class="form-control input-sm">
+                        </td>
+                        <td>
+                            <input type="text" name="im[0][title]" value="" placeholder="Title" class="form-control input-sm">
+                        </td>
+                        <td>
+                            <select name="im[0][target]" class="form-control input-sm">
+                                <option value="">---</option>
+                                <option value="_blank">_blank</option>
+                                <option value="_parent">_parent</option>
+                                <option value="_self">_self</option>
+                                <option value="_top">_top</option>
+                            </select>
+                        </td>
+                        <td>
+                            <button class="btn btn-warning btn-sm remove-row" name="im[0][remove]"><i class="fa fa-times" aria-hidden="true"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="6" style="text-align: right">
+                            <button type="button" class="btn btn-danger btn-sm add-row"><span class="glyphicon glyphicon-plus"></span> Add New Area</button>
+                        </th>
+                    </tr>
+                </tfoot>
+            </table>
+
+        </form>
+
+        <button id="code-preview" class="btn btn-primary">Data Preview</button>
+
+        {{> includes/form-controls }}
+
+	{{/inline}}
+
+    {{#*inline "footer-block"}}
+        <pre><code id="output"></code></pre>
+    {{/inline}}
+
+    {{#*inline "scripts-block"}}
+        <script type="text/javascript" src="/dist/js/grid.js"></script>
+    {{/inline}}
+
+    {{#*inline "scripts-two"}}
+        <script type="text/javascript" src="/dist/js/image-map.js"></script>
+    {{/inline}}
+
+
+{{/layouts/base}}

@@ -1,0 +1,44 @@
+{{#> layouts/base title="Carousel Component" }}
+
+    {{#*inline "heading"}}
+        <h2>Carousel Component - 
+            <i class="fa fa-caret-left" aria-hidden="true"></i>
+            <i class="fa fa-file-image-o" aria-hidden="true"></i>
+            <i class="fa fa-caret-right" aria-hidden="true"></i>
+        </h2>
+    {{/inline}}
+
+	{{#*inline "form"}}
+
+		<form>
+
+            {{> includes/grid }}
+
+
+            <hr />
+
+            {{> includes/padding-row }}
+
+           {{!--  <div class="form-group">
+                <label for="formGroupExampleInput">Example label</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+            </div> --}}
+            <hr />
+
+        </form>
+
+        <button id="code-preview" class="btn btn-primary">Data Preview</button>
+
+        {{> includes/form-controls }}
+
+	{{/inline}}
+
+    {{#*inline "footer-block"}}
+        <pre><code id="output"></code></pre>
+    {{/inline}}
+
+    {{#*inline "scripts-block"}}
+        <script type="text/javascript" src="/dist/js/grid.js"></script>
+    {{/inline}}
+
+{{/layouts/base}}

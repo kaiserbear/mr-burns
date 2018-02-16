@@ -1,0 +1,35 @@
+{{#> layouts/base title="Video Component" }}
+
+    {{#*inline "heading"}}
+        <h2>Video Component - <i class="fa fa-video-camera" aria-hidden="true"></i></h2>
+    {{/inline}}
+
+	{{#*inline "form"}}
+
+		<form>
+
+            {{> includes/grid }}
+
+            <div class="form-group">
+                <label for="formGroupExampleInput">Example label</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+            </div>
+
+        </form>
+
+        <button id="code-preview" class="btn btn-primary">Data Preview</button>
+
+        {{> includes/form-controls }}
+
+	{{/inline}}
+
+    {{#*inline "footer-block"}}
+        <pre><code id="output"></code></pre>
+    {{/inline}}
+
+    {{#*inline "scripts-block"}}
+        <script type="text/javascript" src="/dist/js/grid.js"></script>
+    {{/inline}}
+
+
+{{/layouts/base}}
